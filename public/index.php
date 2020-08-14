@@ -1,12 +1,6 @@
 <?php
 declare(strict_types = 1);
 
-use Chubbyphp\Cors\CorsMiddleware;
-use Chubbyphp\Cors\Negotiation\HeadersNegotiator;
-use Chubbyphp\Cors\Negotiation\MethodNegotiator;
-use Chubbyphp\Cors\Negotiation\Origin\AllowOriginExact;
-use Chubbyphp\Cors\Negotiation\Origin\AllowOriginRegex;
-use Chubbyphp\Cors\Negotiation\Origin\OriginNegotiator;
 use EventEngine\EventEngine;
 use Laminas\Diactoros\Response\EmptyResponse;
 use Laminas\Diactoros\Response\TextResponse;
