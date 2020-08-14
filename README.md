@@ -22,11 +22,11 @@ Accept the self-signed certificate and you should see a "It works" message.
 
 ## Code Generation
 
-The file [tutorial-building.xml](./tutorial-building.xml) contains the exported version of the 
-[buildings tutorial domain](https://event-engine.io/tutorial/intro.html#2-1) from [InspectIO](https://github.com/event-engine/inspectio).
+The file [tutorial-building.xml](./tutorial-building.xml "Buildings Tutorial Domain as XML") contains the exported version of the 
+[buildings tutorial domain](https://event-engine.io/tutorial/intro.html#2-1) from [InspectIO](https://github.com/event-engine/inspectio "InspectIO").
 
-The file [open-code-modeling.php.dist](./open-code-modeling.php.dist) contains the code generation workflow configuration 
-to transform the `tutorial-building.xml` in executable code for [event-engine](https://event-engine.io/).
+The file [open-code-modeling.php.dist](./open-code-modeling.php.dist "Code Generator Workflow Configuration") contains the code generation workflow configuration 
+to transform the `tutorial-building.xml` in executable code for [event-engine](https://event-engine.io/ "The world's only CQRS / ES framework that lets you pick your Flavour").
 
 To start the code generation you have to execute the following CLI command:
 
@@ -37,7 +37,8 @@ $ sudo chown $(id -u -n):$(id -g -n) . -R
 
 This command adds the necessary EventEngine description for commands (`Command.php`), aggregates (`Aggregate.php`) 
 and events (`Event.php`) to the corresponding API files in folder `src/Domain/Api`. Also, the aggregate class (`Building.php`) 
-and aggregate state class (`BuildingState.php`) will be generated in the folder `src/Domain/Model/Building`.
+and aggregate state class (`BuildingState.php`) will be generated in the folder `src/Domain/Model/Building`. The generated
+[GraphML XML file](http://graphml.graphdrawing.org/ "The GraphML File Format") is saved to `data/domain.xml`.
 
 > The code generator will generate code that pass through all arbitrary data. You have to implement the business logic.
 Feel free to modify the generated code. If you run the code generator again, your code **WILL NOT** be overwritten.
@@ -51,7 +52,7 @@ The skeleton is preconfigured with the [cockpit-php-backend handler](https://git
 If you have executed the code generation CLI command you will be able to add buildings and check-in/out users. But you have
 to implement the missing business logic to validate the incoming data.
 
-![Buuldings](./docs/assets/buildings-event-engine.png)
+![Buildings Domain in Cockpit](./docs/assets/buildings-event-engine.png)
 
 ### Event Engine Cockpit is not updated
 
