@@ -1,0 +1,65 @@
+<?php
+
+use Laminas\Filter;
+use OpenCodeModeling\CodeGenerator;
+use EventEngine\CodeGenerator\Inspectio;
+use EventEngine\CodeGenerator\Cartridge;
+use EventEngine\InspectioGraph;
+
+// default filters
+$filterConstName = new Filter\FilterChain();
+$filterConstName->attach(new Filter\Word\SeparatorToSeparator(' ', ''));
+$filterConstName->attach(new Filter\Word\CamelCaseToUnderscore());
+$filterConstName->attach(new Filter\Word\DashToUnderscore());
+$filterConstName->attach(new Filter\StringToUpper());
+
+$filterConstValue = new Filter\FilterChain();
+$filterConstValue->attach(new Filter\Word\SeparatorToSeparator(' ', '-'));
+$filterConstValue->attach(new Filter\Word\UnderscoreToCamelCase());
+$filterConstValue->attach(new Filter\Word\DashToCamelCase());
+
+$filterDirectoryToNamespace = new Filter\FilterChain();
+$filterDirectoryToNamespace->attach(new Filter\Word\SeparatorToSeparator(DIRECTORY_SEPARATOR, '|'));
+$filterDirectoryToNamespace->attach(new Filter\Word\SeparatorToSeparator('|', '\\\\'));
+
+/**
+ * slot SLOT_XML_FILE and SLOT_XSL_FILE are provided via \EventEngine\CodeGenerator\Inspectio\Console\XmlGenerateAllCommand
+ */
+
+/** @var CodeGenerator\Workflow\WorkflowContext $workflowContext */
+$workflowContext->put('xml_filename', 'data/domain.xml');
+
+$config = new CodeGenerator\Config\ComponentList(
+    ...[
+        Inspectio\WorkflowConfigFactory::mxGraphToGraphMlConfig(
+            $workflowContext,
+            Inspectio\WorkflowConfigFactory::SLOT_XML_FILE,
+            Inspectio\WorkflowConfigFactory::SLOT_XSL_FILE,
+            Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML
+        ),
+        new CodeGenerator\Config\ArrayConfig(
+            CodeGenerator\Transformator\StringToFile::workflowComponentDescription(
+                Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML,
+                'xml_filename'
+            )
+        ),
+        InspectioGraph\CodeGenerator\WorkflowConfigFactory::graphMlXmlToEventSourcingAnalyzer(
+            Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML,
+            $filterConstName
+        ),
+        Cartridge\EventEngine\WorkflowConfigFactory::prototypeConfig(
+            $workflowContext,
+            InspectioGraph\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            'src/Domain/Model',
+            'src/Domain/Api',
+            $filterConstName,
+            $filterConstValue,
+            $filterDirectoryToNamespace
+        ),
+        Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForPrototypeConfig(),
+    ]
+);
+
+$config->addConsoleCommands(new Inspectio\Console\XmlGenerateAllCommand());
+
+return $config;
