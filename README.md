@@ -1,7 +1,9 @@
-# php-engine-tutorial-demo
+# php-code-generator-tutorial-demo
 
 Code Generation example implementation for [https://event-engine.io/tutorial/](https://event-engine.io/tutorial/) based on
 [https://github.com/event-engine/php-engine-skeleton](https://github.com/event-engine/php-engine-skeleton).
+
+Please refer to the *php-engine-skeleton* documentation if you have any trouble to get it up and running.
 
 ## Installation
 Please make sure you have installed [Docker](https://docs.docker.com/engine/installation/ "Install Docker") 
@@ -46,9 +48,10 @@ The skeleton is preconfigured with the [cockpit-php-backend handler](https://git
 
 *Note: To avoid CORS issues the Nginx configuration of the Cockpit server is modified to also act as a reverse proxy for requests from Cockpit to the backend.*
 
-You can execute the built-in `HealthCheck` query to very that Cockpit can access the Event Engine backend.
+If you have executed the code generation CLI command you will be able to add buildings and check-in/out users. But you have
+to implement the missing business logic to validate the incoming data.
 
-![HealthCheck](https://github.com/event-engine/php-engine-skeleton/blob/master/docs/assets/cockpit_health_check.png?raw=true)
+![Buuldings](./docs/assets/buildings-event-engine.png)
 
 ### Event Engine Cockpit is not updated
 
@@ -57,7 +60,7 @@ Use the refresh button in the top menu to reload the schema.
 
 ## Powered by prooph software
 
-[![prooph software](https://github.com/codeliner/php-ddd-cargo-sample/blob/master/docs/assets/prooph-software-logo.png)](http://prooph.de)
+[![prooph software](https://github.com/codeliner/php-ddd-cargo-sample/raw/master/docs/assets/prooph-software-logo.png)](http://prooph.de)
 
 Event Engine is maintained by the [prooph software team](http://prooph-software.de/). The source code of Event Engine 
 is open sourced along with an API documentation and a getting started demo. Prooph software offers commercial support and workshops
