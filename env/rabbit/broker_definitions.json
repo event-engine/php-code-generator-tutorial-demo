@@ -1,0 +1,86 @@
+{
+  "rabbit_version": "3.6.14",
+  "users": [
+    {
+      "name": "event-engine",
+      "password_hash": "qTSlFo1McOeeIkV67CER25Q+B6vquysVNWDL3yj2ISr5sstu",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": ""
+    },
+    {
+      "name": "prooph",
+      "password_hash": "SxKhlLCGTegGcVTMyfQqJZAHJArM9wQi/CcPExWFbmax0f9V",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "/event-engine"
+    },
+    {
+      "name": "/"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "prooph",
+      "vhost": "/event-engine",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    },
+    {
+      "user": "event-engine",
+      "vhost": "/event-engine",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    },
+    {
+      "user": "prooph",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "parameters": [],
+  "global_parameters": [
+    {
+      "name": "cluster_name",
+      "value": "prooph@ce28ff581fbc"
+    }
+  ],
+  "policies": [],
+  "queues": [
+    {
+      "name": "ui-queue",
+      "vhost": "/event-engine",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "ui-exchange",
+      "vhost": "/event-engine",
+      "type": "fanout",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "ui-exchange",
+      "vhost": "/event-engine",
+      "destination": "ui-queue",
+      "destination_type": "queue",
+      "routing_key": "#",
+      "arguments": {}
+    }
+  ]
+}
