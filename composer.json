@@ -15,6 +15,12 @@
       "homepage": "http://prooph-software.com/"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/sandrokeil/graphml"
+    }
+  ],
   "require": {
     "php": "^7.4",
     "ext-pdo": "*",
@@ -49,7 +55,10 @@
     "laminas/laminas-httphandlerrunner": "^1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0"
+    "phpunit/phpunit": "^9.0",
+    "event-engine/php-code-generator-cartridge-event-engine": "dev-master",
+    "laminas/laminas-filter": "^2.9",
+    "event-engine/php-code-generator-inspectio": "dev-master"
   },
   "autoload": {
     "psr-4": {
@@ -61,6 +70,7 @@
       "MyServiceTest\\": "tests/"
     }
   },
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
     "test": "vendor/bin/phpunit"
