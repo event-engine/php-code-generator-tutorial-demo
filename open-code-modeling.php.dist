@@ -45,7 +45,8 @@ $config = new CodeGenerator\Config\ComponentList(
         ),
         InspectioGraph\CodeGenerator\WorkflowConfigFactory::graphMlXmlToEventSourcingAnalyzer(
             Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML,
-            $filterConstName
+            $filterConstName,
+            new InspectioGraph\Metadata\JsonMetadataFactory()
         ),
         Cartridge\EventEngine\WorkflowConfigFactory::prototypeConfig(
             $workflowContext,

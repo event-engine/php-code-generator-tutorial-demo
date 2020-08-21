@@ -35,17 +35,17 @@
         <mxGeometry x="728" y="704" width="160" height="100" as="geometry"/>
       </mxCell>
     </event>
-    <command label="AddBuilding" type="command" id="i5hHo93xQP8cvhdTh25DHq">
+    <command label="AddBuilding" type="command" id="i5hHo93xQP8cvhdTh25DHq" metadata="{&#xa;  &quot;newAggregate&quot;: true,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="264" y="224" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <command label="CheckInUser" type="command" id="i26gh6vK7QCsNwpvW4CuYX">
+    <command label="CheckInUser" type="command" id="i26gh6vK7QCsNwpvW4CuYX"  metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="256" y="592" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <command label="CheckOutUser" type="command" id="wbbuUdKzor4e716ub3SnAQ">
+    <command label="CheckOutUser" type="command" id="wbbuUdKzor4e716ub3SnAQ"  metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="256" y="864" width="160" height="100" as="geometry"/>
       </mxCell>
