@@ -8,12 +8,14 @@ use EventEngine\InspectioGraph;
 
 // default filters
 $filterConstName = new Filter\FilterChain();
+$filterConstName->attach(new Cartridge\EventEngine\Filter\NormalizeLabel());
 $filterConstName->attach(new Filter\Word\SeparatorToSeparator(' ', ''));
 $filterConstName->attach(new Filter\Word\CamelCaseToUnderscore());
 $filterConstName->attach(new Filter\Word\DashToUnderscore());
 $filterConstName->attach(new Filter\StringToUpper());
 
 $filterConstValue = new Filter\FilterChain();
+$filterConstValue->attach(new Cartridge\EventEngine\Filter\NormalizeLabel());
 $filterConstValue->attach(new Filter\Word\SeparatorToSeparator(' ', '-'));
 $filterConstValue->attach(new Filter\Word\UnderscoreToCamelCase());
 $filterConstValue->attach(new Filter\Word\DashToCamelCase());
@@ -58,6 +60,15 @@ $config = new CodeGenerator\Config\ComponentList(
             $filterDirectoryToNamespace
         ),
         Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForPrototypeConfig(),
+        Cartridge\EventEngine\WorkflowConfigFactory::functionalConfig(
+            $workflowContext,
+            InspectioGraph\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            'src/Domain/Model',
+            $filterConstName,
+            $filterConstValue,
+            $filterDirectoryToNamespace
+        ),
+        Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForFunctionalConfig(),
     ]
 );
 
