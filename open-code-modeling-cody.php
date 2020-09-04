@@ -1,7 +1,6 @@
 <?php
 
 use EventEngine\CodeGenerator\Cartridge;
-use EventEngine\CodeGenerator\Inspectio;
 use EventEngine\InspectioGraph;
 use Laminas\Filter;
 use OpenCodeModeling\CodeGenerator;
@@ -33,27 +32,15 @@ $workflowContext->put('xml_filename', 'data/domain.xml');
 
 $config = new CodeGenerator\Config\WorkflowList(
     ...[
-        Inspectio\WorkflowConfigFactory::mxGraphToGraphMlConfig(
-            $workflowContext,
-            Inspectio\WorkflowConfigFactory::SLOT_XML_FILE,
-            Inspectio\WorkflowConfigFactory::SLOT_XSL_FILE,
-            Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML
-        ),
-        new CodeGenerator\Config\Workflow(
-            CodeGenerator\Transformator\StringToFile::workflowComponentDescription(
-                Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML,
-                'xml_filename'
-            )
-        ),
-        InspectioGraph\GraphMl\CodeGenerator\WorkflowConfigFactory::graphMlXmlToEventSourcingAnalyzer(
-            Inspectio\WorkflowConfigFactory::SLOT_GRAPHML_XML,
+        InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::CodyJsonToEventSourcingAnalyzer(
+            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_JSON,
             $filterConstName,
-            new InspectioGraph\GraphMl\Metadata\GraphMlJsonMetadataFactory()
+            new InspectioGraph\Cody\Metadata\NodeJsonMetadataFactory()
         ),
 
         Cartridge\EventEngine\WorkflowConfigFactory::prototypeConfig(
             $workflowContext,
-            InspectioGraph\GraphMl\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
             'src/Domain/Model',
             'src/Domain/Api',
             $filterConstName,
@@ -63,7 +50,7 @@ $config = new CodeGenerator\Config\WorkflowList(
         Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForPrototypeConfig(),
         Cartridge\EventEngine\WorkflowConfigFactory::functionalConfig(
             $workflowContext,
-            InspectioGraph\GraphMl\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
             'src/Domain/Model',
             'src/Domain/Model',
             'src/Domain/Model',
@@ -75,7 +62,6 @@ $config = new CodeGenerator\Config\WorkflowList(
     ]
 );
 
-$config->addConsoleCommands(new Inspectio\Console\XmlGenerateAllCommand());
 $config->addConsoleCommands(new InspectioGraph\Cody\Console\CodyJsonGenerateAllCommand());
 
 return $config;

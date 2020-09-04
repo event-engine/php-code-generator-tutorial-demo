@@ -1,15 +1,15 @@
-<mxGraphModel dx="1905.53" dy="552.44" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+<mxGraphModel dx="2149" dy="486.62" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff">
   <root>
     <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <boundedContext label="Building" type="boundedContext" id="ci42SWefUq5RhLogkWzhQC">
-      <mxCell style="boundedContext" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=96;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="-688" y="-416" width="1312" height="1184" as="geometry">
           <mxRectangle x="-688" y="-416" width="1312" height="1184" as="alternateBounds"/>
         </mxGeometry>
       </mxCell>
     </boundedContext>
-    <event label="BuildingAdded" type="event" id="ctuHbHKF1pwqQfa3VZ1nfz">
+    <event label="BuildingAdded" type="event" metadata="&#xa;{&#xa;  &quot;public&quot;: false,&#xa;    &quot;schema&quot;: {&#xa;      &quot;type&quot;: &quot;object&quot;,&#xa;      &quot;required&quot;: [&#xa;        &quot;buildingId&quot;,&#xa;        &quot;name&quot;&#xa;      ],&#xa;      &quot;additionalProperties&quot;: false,&#xa;      &quot;properties&quot;: {&#xa;        &quot;buildingId&quot;: {&#xa;          &quot;type&quot;: &quot;string&quot;,&#xa;          &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;        },&#xa;        &quot;name&quot;: {&#xa;          &quot;type&quot;: &quot;string&quot;,&#xa;          &quot;minLength&quot;: 2&#xa;        }&#xa;      }&#xa;    }&#xa;}&#xa;" id="ctuHbHKF1pwqQfa3VZ1nfz">
       <mxCell style="event" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="728" y="224" width="160" height="100" as="geometry"/>
       </mxCell>
@@ -17,7 +17,7 @@
     <mxCell id="eqKNHxPUCUWJ25gpqAGXfd" style="html=1;" edge="1" parent="ci42SWefUq5RhLogkWzhQC" source="ondJmx9Xo19YLYJk1DqFeL" target="rQt82nGdTq5WKZFFPGR6ZT">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <event label="UserCheckedIn" type="event" id="ondJmx9Xo19YLYJk1DqFeL">
+    <event label="UserCheckedIn" type="event" metadata="&#xa;{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;type&quot;: &quot;object&quot;,&#xa;    &quot;required&quot;: [&#xa;      &quot;buildingId&quot;,&#xa;      &quot;name&quot;&#xa;    ],&#xa;    &quot;additionalProperties&quot;: false,&#xa;    &quot;properties&quot;: {&#xa;      &quot;buildingId&quot;: {&#xa;        &quot;$ref&quot;: &quot;#/definitions/buildingId&quot;&#xa;      },&#xa;      &quot;name&quot;: {&#xa;        &quot;$ref&quot;: &quot;#/definitions/name&quot;&#xa;      }&#xa;    },&#xa;    &quot;definitions&quot;: {&#xa;      &quot;name&quot;: {&#xa;        &quot;type&quot;: [&#xa;          &quot;string&quot;,&#xa;          &quot;null&quot;&#xa;        ],&#xa;        &quot;minLength&quot;: 2&#xa;      },&#xa;      &quot;buildingId&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;,&#xa;        &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&#xa;" id="ondJmx9Xo19YLYJk1DqFeL">
       <mxCell style="event" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="728" y="480" width="160" height="100" as="geometry"/>
       </mxCell>
@@ -35,17 +35,17 @@
         <mxGeometry x="728" y="704" width="160" height="100" as="geometry"/>
       </mxCell>
     </event>
-    <command label="Add Building&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- buildingId: string&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- name: string&lt;/div&gt;" type="command" id="i5hHo93xQP8cvhdTh25DHq" metadata="{&#xa;  &quot;newAggregate&quot;: true,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
+    <command label="Add Building&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- buildingId: string&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- name: string&lt;/div&gt;" type="command" metadata="{&#xa;  &quot;newAggregate&quot;: true,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;$ref&quot;: &quot;#/definitions/buildingId&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;$ref&quot;: &quot;#/definitions/name&quot;&#xa;    }&#xa;  },&#xa;        &quot;definitions&quot;: {&#xa;          &quot;name&quot;: {&#xa;            &quot;type&quot;: [&#xa;              &quot;string&quot;,&#xa;              &quot;null&quot;&#xa;            ],&#xa;            &quot;minLength&quot;: 2&#xa;          },&#xa;          &quot;buildingId&quot;: {&#xa;            &quot;type&quot;: &quot;string&quot;,&#xa;            &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;          }&#xa;        }&#xa;  }&#xa;}" id="i5hHo93xQP8cvhdTh25DHq">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
-        <mxGeometry x="264" y="224" width="160" height="100" as="geometry"/>
+        <mxGeometry x="264" y="223" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <command label="CheckInUser" type="command" id="i26gh6vK7QCsNwpvW4CuYX"  metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
+    <command label="CheckInUser" type="command" metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}" id="i26gh6vK7QCsNwpvW4CuYX">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="256" y="592" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <command label="CheckOutUser" type="command" id="wbbuUdKzor4e716ub3SnAQ"  metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}">
+    <command label="CheckOutUser" type="command" metadata="{&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;  &quot;type&quot;: &quot;object&quot;,&#xa;  &quot;required&quot;: [&#xa;    &quot;buildingId&quot;,&#xa;    &quot;name&quot;&#xa;  ],&#xa;  &quot;additionalProperties&quot;: false,&#xa;  &quot;properties&quot;: {&#xa;    &quot;buildingId&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;pattern&quot;: &quot;^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$&quot;&#xa;    },&#xa;    &quot;name&quot;: {&#xa;      &quot;type&quot;: &quot;string&quot;,&#xa;      &quot;minLength&quot;: 2&#xa;    }&#xa;  }&#xa;  }&#xa;}" id="wbbuUdKzor4e716ub3SnAQ">
       <mxCell style="command" vertex="1" parent="ci42SWefUq5RhLogkWzhQC">
         <mxGeometry x="256" y="864" width="160" height="100" as="geometry"/>
       </mxCell>
