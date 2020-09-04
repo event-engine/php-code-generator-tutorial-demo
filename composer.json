@@ -55,7 +55,7 @@
     "laminas/laminas-httphandlerrunner": "^1.1"
   },
   "require-dev": {
-    "event-engine/php-code-generator-cartridge-event-engine": "^0.1.1",
+    "event-engine/php-code-generator-cartridge-event-engine": "^0.1.2",
     "event-engine/php-code-generator-inspectio": "^0.1.1",
     "laminas/laminas-filter": "^2.9",
     "phpunit/phpunit": "^9.0"
