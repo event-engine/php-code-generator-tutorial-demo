@@ -1267,23 +1267,23 @@
         },
         {
             "name": "laminas/laminas-stratigility",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stratigility.git",
-                "reference": "3f88aa174324bc9e6dd55715f401f9f25dbd722c"
+                "reference": "d6336b873fe8f766f84b82164f2a25e4decd6a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/3f88aa174324bc9e6dd55715f401f9f25dbd722c",
-                "reference": "3f88aa174324bc9e6dd55715f401f9f25dbd722c",
+                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/d6336b873fe8f766f84b82164f2a25e4decd6a9a",
+                "reference": "d6336b873fe8f766f84b82164f2a25e4decd6a9a",
                 "shasum": ""
             },
             "require": {
                 "fig/http-message-util": "^1.1",
                 "laminas/laminas-escaper": "^2.3",
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.1",
+                "php": "^7.3 || ~8.0.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
@@ -1297,18 +1297,14 @@
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "laminas/laminas-diactoros": "^1.7.1",
                 "malukenho/docheader": "^0.1.6",
-                "phpunit/phpunit": "^7.0.1"
+                "phpspec/prophecy": "^1.12",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.3"
             },
             "suggest": {
                 "psr/http-message-implementation": "Please install a psr/http-message-implementation to consume Stratigility; e.g., laminas/laminas-diactoros"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2.x-dev",
-                    "dev-develop": "3.3.x-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "src/functions/double-pass-middleware.php",
@@ -1337,7 +1333,13 @@
                 "psr-15",
                 "psr-7"
             ],
-            "time": "2020-03-29T13:31:02+00:00"
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2020-10-20T10:38:04+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
@@ -2754,12 +2756,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "ba5d234b3a1559321b816b64aafc2ce6728799ff"
+                "reference": "327370943772f9917bc2dc2aa4263db2d572a112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ba5d234b3a1559321b816b64aafc2ce6728799ff",
-                "reference": "ba5d234b3a1559321b816b64aafc2ce6728799ff",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/327370943772f9917bc2dc2aa4263db2d572a112",
+                "reference": "327370943772f9917bc2dc2aa4263db2d572a112",
                 "shasum": ""
             },
             "conflict": {
@@ -2859,6 +2861,7 @@
                 "magento/magento1ee": ">=1,<1.14.4.3",
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
                 "marcwillmann/turn": "<0.3.3",
+                "mediawiki/core": ">=1.31,<1.31.4|>=1.32,<1.32.4|>=1.33,<1.33.1",
                 "mittwald/typo3_forum": "<1.2.1",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
@@ -3055,7 +3058,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-08T21:02:27+00:00"
+            "time": "2020-10-19T07:02:45+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -3109,16 +3112,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
+                "reference": "aed596913b70fae57be53d86faa2e9ef85a2297b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/aed596913b70fae57be53d86faa2e9ef85a2297b",
+                "reference": "aed596913b70fae57be53d86faa2e9ef85a2297b",
                 "shasum": ""
             },
             "require": {
@@ -3130,7 +3133,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -3181,7 +3184,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "willdurand/negotiation",
@@ -3313,18 +3316,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-code-generator-cartridge-event-engine.git",
-                "reference": "a1ca35c78a84b9b4b02b0de3e40c48be926cb26d"
+                "reference": "3d0cbf7df0be6189245a5cbbcdfaf57285baf335"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-code-generator-cartridge-event-engine/zipball/a1ca35c78a84b9b4b02b0de3e40c48be926cb26d",
-                "reference": "a1ca35c78a84b9b4b02b0de3e40c48be926cb26d",
+                "url": "https://api.github.com/repos/event-engine/php-code-generator-cartridge-event-engine/zipball/3d0cbf7df0be6189245a5cbbcdfaf57285baf335",
+                "reference": "3d0cbf7df0be6189245a5cbbcdfaf57285baf335",
                 "shasum": ""
             },
             "require": {
                 "event-engine/php-inspectio-graph": "dev-feature/cody as 0.2.0",
                 "ext-json": "*",
-                "open-code-modeling/php-code-ast": "dev-feature/typed-property as 0.1.0",
+                "open-code-modeling/json-schema-to-php": "dev-master",
+                "open-code-modeling/json-schema-to-php-ast": "dev-master",
+                "open-code-modeling/php-code-ast": "^0.2.0",
                 "open-code-modeling/php-code-generator": "^0.2.0",
                 "open-code-modeling/php-code-generator-transformator": "^0.1.0",
                 "php": "^7.3 || ^8.0",
@@ -3364,7 +3369,7 @@
                 }
             ],
             "description": "PHP Code Generator Cartridge for Event Engine",
-            "time": "2020-10-16T15:41:54+00:00"
+            "time": "2020-10-23T13:48:19+00:00"
         },
         {
             "name": "event-engine/php-code-generator-inspectio",
@@ -3755,17 +3760,126 @@
             "time": "2020-09-26T10:30:38+00:00"
         },
         {
-            "name": "open-code-modeling/php-code-ast",
-            "version": "dev-feature/typed-property",
+            "name": "open-code-modeling/json-schema-to-php",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/open-code-modeling/php-code-ast.git",
-                "reference": "4af45c20310bce2296fe5c7a62c54607662bccf9"
+                "url": "https://github.com/open-code-modeling/json-schema-to-php.git",
+                "reference": "57789407a8d712789338012312f9debf44ac5f34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/open-code-modeling/php-code-ast/zipball/4af45c20310bce2296fe5c7a62c54607662bccf9",
-                "reference": "4af45c20310bce2296fe5c7a62c54607662bccf9",
+                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php/zipball/57789407a8d712789338012312f9debf44ac5f34",
+                "reference": "57789407a8d712789338012312f9debf44ac5f34",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "jangregor/phpstan-prophecy": "^0.8.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpstan/phpstan": "^0.12.33",
+                "phpstan/phpstan-strict-rules": "^0.12.4",
+                "phpunit/phpunit": "^9.2.6",
+                "prooph/php-cs-fixer-config": "^0.3",
+                "roave/security-advisories": "dev-master",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OpenCodeModeling\\JsonSchemaToPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sandro Keil",
+                    "homepage": "https://sandro-keil.de",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "Parses JSON schema files and provides an API to easily generate code from JSON schema.",
+            "keywords": [
+                "json",
+                "parser",
+                "php",
+                "schema"
+            ],
+            "time": "2020-10-22T19:36:42+00:00"
+        },
+        {
+            "name": "open-code-modeling/json-schema-to-php-ast",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/open-code-modeling/json-schema-to-php-ast.git",
+                "reference": "590f204e785c7a2981fda508c67978538f95ddb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php-ast/zipball/590f204e785c7a2981fda508c67978538f95ddb1",
+                "reference": "590f204e785c7a2981fda508c67978538f95ddb1",
+                "shasum": ""
+            },
+            "require": {
+                "open-code-modeling/json-schema-to-php": "dev-master",
+                "open-code-modeling/php-code-ast": "^0.2.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "jangregor/phpstan-prophecy": "^0.8.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpstan/phpstan": "^0.12.33",
+                "phpstan/phpstan-strict-rules": "^0.12.4",
+                "phpunit/phpunit": "^9.2.6",
+                "prooph/php-cs-fixer-config": "^0.3",
+                "roave/security-advisories": "dev-master",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OpenCodeModeling\\JsonSchemaToPhpAst\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sandro Keil",
+                    "homepage": "https://sandro-keil.de",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "Provides factories to create PhpParser node visitors from JSON schema e. g. value objects",
+            "keywords": [
+                "code",
+                "generation",
+                "json",
+                "php",
+                "schema"
+            ],
+            "time": "2020-10-23T13:29:27+00:00"
+        },
+        {
+            "name": "open-code-modeling/php-code-ast",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/open-code-modeling/php-code-ast.git",
+                "reference": "7a528cf4feeb18a387e100e9e7e66603d699c7e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/open-code-modeling/php-code-ast/zipball/7a528cf4feeb18a387e100e9e7e66603d699c7e8",
+                "reference": "7a528cf4feeb18a387e100e9e7e66603d699c7e8",
                 "shasum": ""
             },
             "require": {
@@ -3798,7 +3912,7 @@
                 }
             ],
             "description": "Open Code Modeling PHP Code AST",
-            "time": "2020-10-02T15:34:28+00:00"
+            "time": "2020-10-23T13:15:53+00:00"
         },
         {
             "name": "open-code-modeling/php-code-generator",
@@ -4512,16 +4626,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.4.1",
+            "version": "9.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "1f09a12726593737e8a228ebb1c8647305d07c41"
+                "reference": "3866b2eeeed21b1b099c4bc0b7a1690ac6fd5baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1f09a12726593737e8a228ebb1c8647305d07c41",
-                "reference": "1f09a12726593737e8a228ebb1c8647305d07c41",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3866b2eeeed21b1b099c4bc0b7a1690ac6fd5baa",
+                "reference": "3866b2eeeed21b1b099c4bc0b7a1690ac6fd5baa",
                 "shasum": ""
             },
             "require": {
@@ -4607,7 +4721,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-11T07:41:19+00:00"
+            "time": "2020-10-19T09:23:29+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -5604,16 +5718,16 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5"
+                "reference": "64fbe93b02024763359aea2bc81af05086c6af82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/b740103edbdcc39602239ee8860f0f45a8eb9aa5",
-                "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/64fbe93b02024763359aea2bc81af05086c6af82",
+                "reference": "64fbe93b02024763359aea2bc81af05086c6af82",
                 "shasum": ""
             },
             "require": {
@@ -5625,7 +5739,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5678,20 +5792,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e"
+                "reference": "8db0ae7936b42feb370840cf24de1a144fb0ef27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
-                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/8db0ae7936b42feb370840cf24de1a144fb0ef27",
+                "reference": "8db0ae7936b42feb370840cf24de1a144fb0ef27",
                 "shasum": ""
             },
             "require": {
@@ -5703,7 +5817,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5759,20 +5873,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
+                "reference": "b5f7b932ee6fa802fc792eabd77c4c88084517ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b5f7b932ee6fa802fc792eabd77c4c88084517ce",
+                "reference": "b5f7b932ee6fa802fc792eabd77c4c88084517ce",
                 "shasum": ""
             },
             "require": {
@@ -5784,7 +5898,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5836,20 +5950,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca"
+                "reference": "9d920e3218205554171b2503bb3e4a1366824a16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
-                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/9d920e3218205554171b2503bb3e4a1366824a16",
+                "reference": "9d920e3218205554171b2503bb3e4a1366824a16",
                 "shasum": ""
             },
             "require": {
@@ -5858,7 +5972,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5912,20 +6026,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.1",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
+                "reference": "f54ef00f4678f348f133097fa8c3701d197ff44d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/f54ef00f4678f348f133097fa8c3701d197ff44d",
+                "reference": "f54ef00f4678f348f133097fa8c3701d197ff44d",
                 "shasum": ""
             },
             "require": {
@@ -5934,7 +6048,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.19-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5992,7 +6106,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T09:01:57+00:00"
         },
         {
             "name": "symfony/service-contracts",
