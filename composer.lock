@@ -3765,12 +3765,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/open-code-modeling/json-schema-to-php.git",
-                "reference": "57789407a8d712789338012312f9debf44ac5f34"
+                "reference": "4dde7ed50b7ebe4af4193d4532cf1b6d47bf68fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php/zipball/57789407a8d712789338012312f9debf44ac5f34",
-                "reference": "57789407a8d712789338012312f9debf44ac5f34",
+                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php/zipball/4dde7ed50b7ebe4af4193d4532cf1b6d47bf68fc",
+                "reference": "4dde7ed50b7ebe4af4193d4532cf1b6d47bf68fc",
                 "shasum": ""
             },
             "require": {
@@ -3810,7 +3810,7 @@
                 "php",
                 "schema"
             ],
-            "time": "2020-10-22T19:36:42+00:00"
+            "time": "2020-10-23T14:22:52+00:00"
         },
         {
             "name": "open-code-modeling/json-schema-to-php-ast",
@@ -3818,17 +3818,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/open-code-modeling/json-schema-to-php-ast.git",
-                "reference": "590f204e785c7a2981fda508c67978538f95ddb1"
+                "reference": "cfd82c0e0c036657a820144eb21ad28e16abcfd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php-ast/zipball/590f204e785c7a2981fda508c67978538f95ddb1",
-                "reference": "590f204e785c7a2981fda508c67978538f95ddb1",
+                "url": "https://api.github.com/repos/open-code-modeling/json-schema-to-php-ast/zipball/cfd82c0e0c036657a820144eb21ad28e16abcfd1",
+                "reference": "cfd82c0e0c036657a820144eb21ad28e16abcfd1",
                 "shasum": ""
             },
             "require": {
                 "open-code-modeling/json-schema-to-php": "dev-master",
-                "open-code-modeling/php-code-ast": "^0.2.0",
+                "open-code-modeling/php-code-ast": "^0.2.1",
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
@@ -3866,20 +3866,20 @@
                 "php",
                 "schema"
             ],
-            "time": "2020-10-23T13:29:27+00:00"
+            "time": "2020-10-23T15:47:09+00:00"
         },
         {
             "name": "open-code-modeling/php-code-ast",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/open-code-modeling/php-code-ast.git",
-                "reference": "7a528cf4feeb18a387e100e9e7e66603d699c7e8"
+                "reference": "636e7b476bd0804095ce42fb1bc506e0087c3b70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/open-code-modeling/php-code-ast/zipball/7a528cf4feeb18a387e100e9e7e66603d699c7e8",
-                "reference": "7a528cf4feeb18a387e100e9e7e66603d699c7e8",
+                "url": "https://api.github.com/repos/open-code-modeling/php-code-ast/zipball/636e7b476bd0804095ce42fb1bc506e0087c3b70",
+                "reference": "636e7b476bd0804095ce42fb1bc506e0087c3b70",
                 "shasum": ""
             },
             "require": {
@@ -3912,7 +3912,7 @@
                 }
             ],
             "description": "Open Code Modeling PHP Code AST",
-            "time": "2020-10-23T13:15:53+00:00"
+            "time": "2020-10-23T15:08:12+00:00"
         },
         {
             "name": "open-code-modeling/php-code-generator",
