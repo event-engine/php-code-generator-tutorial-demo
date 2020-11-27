@@ -1,20 +1,21 @@
 <?php
 
 use EventEngine\CodeGenerator\Cartridge;
-use EventEngine\InspectioGraph;
+use EventEngine\CodeGenerator\EventEngineAst;
+use EventEngine\InspectioGraphCody;
 use Laminas\Filter;
 use OpenCodeModeling\CodeGenerator;
 
 // default filters
 $filterConstName = new Filter\FilterChain();
-$filterConstName->attach(new Cartridge\EventEngine\Filter\NormalizeLabel());
+$filterConstName->attach(new EventEngineAst\Filter\NormalizeLabel());
 $filterConstName->attach(new Filter\Word\SeparatorToSeparator(' ', ''));
 $filterConstName->attach(new Filter\Word\CamelCaseToUnderscore());
 $filterConstName->attach(new Filter\Word\DashToUnderscore());
 $filterConstName->attach(new Filter\StringToUpper());
 
 $filterConstValue = new Filter\FilterChain();
-$filterConstValue->attach(new Cartridge\EventEngine\Filter\NormalizeLabel());
+$filterConstValue->attach(new EventEngineAst\Filter\NormalizeLabel());
 $filterConstValue->attach(new Filter\Word\SeparatorToSeparator(' ', '-'));
 $filterConstValue->attach(new Filter\Word\UnderscoreToCamelCase());
 $filterConstValue->attach(new Filter\Word\DashToCamelCase());
@@ -32,25 +33,25 @@ $workflowContext->put('xml_filename', 'data/domain.xml');
 
 $config = new CodeGenerator\Config\WorkflowList(
     ...[
-        InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::CodyJsonToEventSourcingAnalyzer(
-            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_JSON,
+        InspectioGraphCody\CodeGenerator\WorkflowConfigFactory::codyJsonToEventSourcingAnalyzer(
+            InspectioGraphCody\CodeGenerator\WorkflowConfigFactory::SLOT_JSON,
             $filterConstName,
-            new InspectioGraph\Cody\Metadata\NodeJsonMetadataFactory()
+            new InspectioGraphCody\Metadata\NodeJsonMetadataFactory()
         ),
 
-        Cartridge\EventEngine\WorkflowConfigFactory::prototypeConfig(
+        Cartridge\EventEngine\PrototypeWorkflowFactory::prototypeConfig(
             $workflowContext,
-            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            InspectioGraphCody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
             'src/Domain/Model',
             'src/Domain/Api',
             $filterConstName,
             $filterConstValue,
             $filterDirectoryToNamespace
         ),
-        Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForPrototypeConfig(),
-        Cartridge\EventEngine\WorkflowConfigFactory::functionalConfig(
+        Cartridge\EventEngine\PrototypeWorkflowFactory::codeToFilesForPrototypeConfig(),
+        Cartridge\EventEngine\FunctionalWorkflowFactory::functionalConfig(
             $workflowContext,
-            InspectioGraph\Cody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
+            InspectioGraphCody\CodeGenerator\WorkflowConfigFactory::SLOT_EVENT_SOURCING_ANALYZER,
             'src/Domain/Model',
             'src/Domain/Model',
             'src/Domain/Model',
@@ -58,10 +59,10 @@ $config = new CodeGenerator\Config\WorkflowList(
             $filterConstValue,
             $filterDirectoryToNamespace
         ),
-        Cartridge\EventEngine\WorkflowConfigFactory::codeToFilesForFunctionalConfig(),
+        Cartridge\EventEngine\FunctionalWorkflowFactory::codeToFilesForFunctionalConfig(),
     ]
 );
 
-$config->addConsoleCommands(new InspectioGraph\Cody\Console\CodyJsonGenerateAllCommand());
+$config->addConsoleCommands(new InspectioGraphCody\Console\CodyJsonGenerateAllCommand());
 
 return $config;

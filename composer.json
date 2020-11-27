@@ -1,79 +1,85 @@
 {
-  "name": "event-engine/php-engine-skeleton",
-  "description": "Dockerized PHP skeleton for Event Engine",
-  "homepage": "https://event-engine.io/",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Alexander Miertsch",
-      "email": "contact@prooph.de",
-      "homepage": "http://www.prooph.de"
+    "name": "event-engine/php-engine-skeleton",
+    "description": "Dockerized PHP skeleton for Event Engine",
+    "homepage": "https://event-engine.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Miertsch",
+            "email": "contact@prooph.de",
+            "homepage": "http://www.prooph.de"
+        },
+        {
+            "name": "Sandro Keil",
+            "email": "contact@prooph.de",
+            "homepage": "http://prooph-software.com/"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sandrokeil/graphml"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-pdo": "*",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "event-engine/cockpit-php-backend": "dev-master",
+        "event-engine/discolight": "^0.2",
+        "event-engine/php-data": "^1.0",
+        "event-engine/php-engine": "^0.15",
+        "event-engine/php-engine-utils": "^0.1",
+        "event-engine/php-json-schema": "^1.0",
+        "event-engine/php-logger": "^0.1",
+        "event-engine/php-messaging": "^0.1",
+        "event-engine/php-persistence": "^0.8",
+        "event-engine/php-postgres-document-store": "^v0.11.0",
+        "event-engine/php-schema": "^0.1",
+        "event-engine/prooph-v7-event-store": "^v0.9.1",
+        "laminas/laminas-config-aggregator": "^0.2.0",
+        "laminas/laminas-diactoros": "^2.2",
+        "laminas/laminas-httphandlerrunner": "^1.1",
+        "laminas/laminas-stdlib": "^3.2",
+        "laminas/laminas-stratigility": "^3.2",
+        "mezzio/mezzio-helpers": "^5.3",
+        "mezzio/mezzio-problem-details": "^1.0",
+        "monolog/monolog": "^1.24",
+        "nikic/fast-route": "^1.3",
+        "opis/json-schema": "^1.0",
+        "prooph/humus-amqp-producer": "^2.1",
+        "prooph/pdo-event-store": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/log": "^1.1",
+        "roave/security-advisories": "dev-master"
     },
-    {
-      "name": "Sandro Keil",
-      "email": "contact@prooph.de",
-      "homepage": "http://prooph-software.com/"
+    "require-dev": {
+        "event-engine/php-code-generator-cartridge-event-engine": "dev-feature/cody-support",
+        "event-engine/php-code-generator-inspectio": "^0.2.0",
+        "event-engine/php-inspectio-graph-cody": "dev-master",
+        "event-engine/php-inspectio-graph-ml": "dev-master",
+        "laminas/laminas-filter": "^2.9",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyService\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MyServiceTest\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+        }
     }
-  ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/sandrokeil/graphml"
-    }
-  ],
-  "require": {
-    "php": "^7.4",
-    "ext-pdo": "*",
-    "ext-mbstring": "*",
-    "ext-json": "*",
-    "roave/security-advisories": "dev-master",
-    "event-engine/php-engine": "^0.15",
-    "event-engine/discolight": "^0.2",
-    "event-engine/php-data": "^1.0",
-    "event-engine/php-schema": "^0.1",
-    "event-engine/php-messaging": "^0.1",
-    "event-engine/php-engine-utils": "^0.1",
-    "event-engine/php-logger": "^0.1",
-    "event-engine/php-persistence": "^0.8",
-    "event-engine/php-json-schema": "^1.0",
-    "event-engine/php-postgres-document-store": "^v0.11.0",
-    "event-engine/prooph-v7-event-store": "^v0.9.1",
-    "event-engine/cockpit-php-backend": "dev-master",
-    "prooph/pdo-event-store": "^1.0",
-    "prooph/humus-amqp-producer": "^2.1",
-    "laminas/laminas-stdlib": "^3.2",
-    "laminas/laminas-config-aggregator": "^0.2.0",
-    "laminas/laminas-stratigility": "^3.2",
-    "mezzio/mezzio-helpers": "^5.3",
-    "nikic/fast-route": "^1.3",
-    "psr/log": "^1.1",
-    "monolog/monolog": "^1.24",
-    "psr/http-server-middleware": "^1.0",
-    "mezzio/mezzio-problem-details": "^1.0",
-    "opis/json-schema": "^1.0",
-    "laminas/laminas-diactoros": "^2.2",
-    "laminas/laminas-httphandlerrunner": "^1.1"
-  },
-  "require-dev": {
-    "event-engine/php-code-generator-cartridge-event-engine": "dev-feature/cody-support",
-    "event-engine/php-code-generator-inspectio": "^0.2.0",
-    "event-engine/php-inspectio-graph": "dev-feature/cody",
-    "laminas/laminas-filter": "^2.9",
-    "phpunit/phpunit": "^9.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "MyService\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "MyServiceTest\\": "tests/"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "scripts": {
-    "test": "vendor/bin/phpunit"
-  }
 }
