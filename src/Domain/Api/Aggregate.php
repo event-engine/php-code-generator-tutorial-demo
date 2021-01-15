@@ -1,12 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace MyService\Domain\Api;
 
+use MyService\Domain\Model\building\Building;
+use EventEngine\JsonSchema\JsonSchemaArray;
+use EventEngine\JsonSchema\JsonSchema;
 use EventEngine\EventEngine;
 use EventEngine\EventEngineDescription;
-
 class Aggregate implements EventEngineDescription
 {
     /**
@@ -16,13 +17,12 @@ class Aggregate implements EventEngineDescription
      *
      * const USER = 'User';
      */
-
-
     /**
      * @param EventEngine $eventEngine
      */
-    public static function describe(EventEngine $eventEngine): void
+    public static function describe(EventEngine $eventEngine) : void
     {
+        $eventEngine->process(Command::ADD_BUILDING)->withNew(self::BUILDING)->identifiedBy('buildingId')->handle([Building::class, 'add_building'])->recordThat(Event::BUILDING_ADDED)->apply([Building::class, 'whenBuilding_added'])->storeStateIn('buildings');
         /**
          * Describe how your aggregates handle commands
          *
@@ -44,4 +44,5 @@ class Aggregate implements EventEngineDescription
          *      ->apply([User::class, 'whenUsernameChanged']);
          */
     }
+    public const BUILDING = 'building';
 }
